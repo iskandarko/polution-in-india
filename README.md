@@ -1,0 +1,1 @@
+No installation or any preparations required. Files in ./dist folder are ready to be served statically.
