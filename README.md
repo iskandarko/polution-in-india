@@ -1,1 +1,2 @@
-No installation or any preparations required. Files in ./dist folder are ready to be served statically.
+1. No installation or any preparations required. Files in ./dist folder are ready to be served statically.
+2. ./docs folder contains the same files for hosting on GitHub Pages (https://iskandarko.github.io/polution-in-india/).

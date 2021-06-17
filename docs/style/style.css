@@ -1,0 +1,221 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Noto Serif SC', serif;
+}
+
+/* HEADER */
+
+footer, header {
+    height: 3rem;
+}
+
+/* MAIN CONTAINER */
+
+.main-container {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CONTENT */
+
+.content-container {
+    width: 1300px;
+    display: grid;
+    grid-template: repeat(6, auto) / repeat(12, 1fr);
+    grid-template-areas:
+    ". t t t t t w w w w w ."
+    ". c c c c c w w w w w ."
+    ". c c c c c w w w w w ."
+    ". c c c c c w w w w w ."
+    ". c c c c c w w w w w ."
+    ". n n n n n n n n n n ."
+    ;
+}
+
+.content-container > div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* CONTENT: TOPIC */
+
+.topic-header {
+    grid-area: t;
+    background-image: url('https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-hello/SMOG_vdyw4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: rgb(243, 243, 241) 1px 0 10px;
+}
+
+.topic-content {
+    grid-area: c;
+}
+
+/* CONTENT: WIDGET */
+
+.widget-container {
+    grid-area: w;
+    display: flex;
+    justify-content: center;
+}
+
+.widget {
+    width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.widget-display {
+    width: 55%;
+    position: absolute;
+    left: 118px;
+    bottom: 85px;
+}
+
+#city-select {
+    background-color: transparent;
+    width: 250px;
+    height: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align-last: center;
+    font-size: 25px;
+    font-family: 'Anton', sans-serif;
+    border: none;
+}
+
+#pack_of_cigarettes {
+    width: 100%;
+    position: absolute;
+    left: 5px;
+    bottom: 30px;
+}
+
+#cigarettes_display {
+    height: 3rem;
+}
+
+#cigarettes_display img {
+    height: 100%;
+}
+
+#statistics {
+    height: 1rem;
+}
+
+.widget-note {
+    border: 6px solid black;
+    font-family: 'Staatliches';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* CONTENT: NOTES */
+
+.notes {
+    background-color: rgba(240, 240, 240, 0.685);
+    grid-area: n;
+}
+
+/* CONTENT: RESPONSIVENESS */
+
+@media all and (max-width: 1400px) {
+    .content-container {
+        width: 1000px;
+        grid-template: repeat(6, auto) / repeat(12, 1fr);
+        grid-template-areas:
+        ". t t t t t t t t t t ."
+        ". c c c c w w w w w w ."
+        ". c c c c w w w w w w ."
+        ". c c c c w w w w w w ."
+        ". c c c c w w w w w w ."
+        ". n n n n n n n n n n ."
+        ;
+    }
+
+    .widget-display {
+        left: 105px;
+        bottom: 12%;
+    }
+
+    #pack_of_cigarettes {
+        left: 0;
+        bottom: 5%;
+    }
+
+    .widget-note {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media all and (max-width: 950px) {
+    .content-container {
+        width: auto;
+        padding: 1rem;
+        grid-template: auto 700px auto auto / repeat(4, 1fr);
+        grid-template-areas:
+        " t t t t "
+        " w w w w "
+        " c c c c "
+        " n n n n "
+        ;
+    }
+
+    .widget {
+        width: 460px;;
+    }
+
+    .widget-display {
+        left: 105px;
+        bottom: 100px;
+    }
+
+    #pack_of_cigarettes {
+        left: 0;
+        bottom: 50px;
+    }
+
+    .widget-note {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media all and (max-width: 530px) {
+    .content-container {
+        width: auto;
+        padding: 1rem;
+        grid-template: auto 600px auto auto / repeat(4, 1fr);
+        grid-template-areas:
+        " t t t t "
+        " w w w w "
+        " c c c c "
+        " n n n n "
+        ;
+    }
+
+    #city-select {
+        font-size: 20px;
+    }
+
+    #pack_of_cigarettes {
+        bottom: 50%;
+        transform: translate(0,50%);
+    }
+
+    .widget-display {
+        width: 250px;
+        bottom: 30%;
+        left: 50%;
+        transform: translate(-50%,10%);
+    }
+    
+    .widget-note {
+        display: none;
+    }
+}
