@@ -34,9 +34,6 @@ footer, header {
     ". c c c c c w w w w w ."
     ". n n n n n n n n n n ."
     ;
-
-    display: -ms-grid; 
-    -ms-grid-columns: 1fr 1fr;
 }
 
 .content-container > div {
@@ -48,8 +45,6 @@ footer, header {
 
 .topic-header {
     grid-area: t;
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
     background-image: url('https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-hello/SMOG_vdyw4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,17 +53,12 @@ footer, header {
 
 .topic-content {
     grid-area: c;
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
 }
 
 /* CONTENT: WIDGET */
 
 .widget-container {
     grid-area: w;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 2;
     display: flex;
     justify-content: center;
 }
@@ -129,9 +119,40 @@ footer, header {
 .notes {
     background-color: rgba(240, 240, 240, 0.685);
     grid-area: n;
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
+}
+
+
+@media all and (-ms-high-contrast:none) /* FOR IE */ {
+    .content-container {
+        display: -ms-grid; 
+        -ms-grid-columns: 1fr 1fr;
+    }
+
+    .widget-container {
+        height: 700px;
+    }
+
+    .topic-header {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .topic-content {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+
+    .widget-container {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        -ms-grid-column: 2;
+    }
+    
+    .notes {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
+    }
 }
 
 /* CONTENT: RESPONSIVENESS */
@@ -165,7 +186,8 @@ footer, header {
     }
 }
 
-@media all and (max-width: 1400px) and (-ms-high-contrast:none) /* Detecting IE */ { 
+
+@media all and (max-width: 1400px) and (-ms-high-contrast:none) /* FOR IE */ { 
     .content-container {
         -ms-grid-columns: 1fr 2fr;
     }
@@ -230,7 +252,7 @@ footer, header {
     }
 }
 
-@media all and (max-width: 950px) and (-ms-high-contrast:none) /* Detecting IE */ {
+@media all and (max-width: 950px) and (-ms-high-contrast:none) /* FOR IE */ {
     .content-container {
         width: 80%;
         -ms-grid-columns: 1fr;
@@ -299,7 +321,7 @@ footer, header {
     }
 }
 
-@media all and (max-width: 530px) and (-ms-high-contrast:none) /* Detecting IE */ {
+@media all and (max-width: 530px) and (-ms-high-contrast:none) /* FOR IE */ {
 
     .content-container {
         width: 80%;

@@ -67,7 +67,7 @@ function populateText(data) {
     for (var key in data) {
         var htmlElement = document.getElementById(key);
         if (htmlElement) {
-            if (key.includes('url')){
+            if (key.indexOf('url') !== -1){
                 htmlElement.href = data[key];
             }
             htmlElement.innerHTML = data[key];
