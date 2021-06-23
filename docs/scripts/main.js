@@ -14,7 +14,7 @@ function initContentBasedOnLang() {
 function init(data) {
     var convertedData = convertJson(data); // see data.js
     updateStatistics();
-    resetEventListenerForSelector(convertedData)
+    resetEventListenerForSelector(convertedData);
     populateHtml(data, convertedData);
 }
 
@@ -47,7 +47,7 @@ function handleSelect(e, convertedData) {
 
 function populateHtml(data, convertedData) {
     populateCitySelector(convertedData);
-    populateText(data)
+    populateText(data);
 }
 
 function populateCitySelector(convertedData) {
@@ -78,10 +78,10 @@ function populateText(data) {
 function displayCigs(num) {
     var display = document.getElementById('cigarettes_display');
     display.innerHTML = '';
-    for (var i=0; i<num; i++) {
+    for (var i = 0; i < num; i++) {
         var ciggImg = document.createElement('img');
         ciggImg.src = "img/ciggrette_icon.png";
-        ciggImg.alt = "Ciggarete image"
+        ciggImg.alt = "Ciggarete image";
         display.appendChild(ciggImg);
     }    
 }

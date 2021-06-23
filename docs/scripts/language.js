@@ -1,4 +1,3 @@
-
 function userSpeaksHindi() {
     if (navigator.languages && navigator.languages.length) {
       for (var i = 0; i < navigator.languages.length; i++) {
