@@ -15,7 +15,7 @@ function createObjectStructure(arr, obj, value) {
         if (!obj[item]) {
             obj[item] = {};
         }
-        createObjectStructure(arr, obj[item], value)
+        createObjectStructure(arr, obj[item], value);
     }
 }
 
@@ -27,7 +27,7 @@ function getSortedCitiesList(convertedData) {
     citiesList.sort(function(a,b) {
         if(a < b) { return -1; }
         if(a > b) { return 1; }
-        return 0;
+        else return 0;
     });
     return citiesList;
 }
@@ -268,3 +268,5 @@ var hindiJson = {
     "p_9_value": "पूरे साल में बीजिंग में औसत पीएम 2.5 लगभग 85 माइक्रोग्राम प्रति घन मीटर होता है जो प्रतिदिन करीब चार सिगरेट पीने के बराबर है. इसी तरह, अगर भारत में नई दिल्ली में वायु प्रदूषण 547 माइक्रोग्राम प्रति घन मीटर है तो यह हर दिन 25 सिगरेट पीने के बराबर है.",
     "p_10_value": "हमने भारत के 20 शहरों से एक हफ़्ते तक हर दिन पीएम 2.5 के आंकड़े इकट्ठे किए. हमने हर शहर के पीएम 2.5 आंकड़ों के औसत की गणना की और सिगरेट की संख्या प्राप्त करने के लिए इसे 21.6 माइक्रोग्राम प्रति घन मीटर से भाग कर दिया.यह बताना महत्वपूर्ण है कि दिखाए गए नंबर इस धारणा पर आधारित हैं कि आर्दश रूप से आप अपने अधिकतम समय में बाहर की हवा में सांस लेते हैं."
 }
+
+module.exports = { getSortedCitiesList, convertJson, englishJson, createObjectStructure }; //for testing purposes

@@ -83,10 +83,8 @@ function displayCigs(num) {
         ciggImg.src = "img/ciggrette_icon.png";
         ciggImg.alt = "Ciggarete image";
         display.appendChild(ciggImg);
-    }    
+    }
 }
-
-
 
 
 

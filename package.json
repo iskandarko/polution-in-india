@@ -1,0 +1,25 @@
+{
+  "name": "india-polution",
+  "version": "1.0.0",
+  "description": "1. No installation or any preparations required. Files in ./dist folder are ready to be served statically. 2. ./docs folder contains the same files for hosting on GitHub Pages (https://iskandarko.github.io/polution-in-india/).",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iskandarko/polution-in-india.git"
+  },
+  "author": "Iskandar Mamadnazarov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iskandarko/polution-in-india/issues"
+  },
+  "homepage": "https://github.com/iskandarko/polution-in-india#readme",
+  "devDependencies": {
+    "jest": "^27.0.5"
+  }
+}
